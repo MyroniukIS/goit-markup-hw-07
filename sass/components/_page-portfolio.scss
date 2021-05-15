@@ -5,9 +5,14 @@
     justify-content: center;
     margin-bottom: 50px;
   }
-  .galery-section__filter-element:not(:last-child) {
-    margin-right: 8px;
+
+  .galery-section__filter-element {
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
   }
+  
   .galery-section__portfolio-btn {
     padding: 6px 22px;
     font-weight: 500;
@@ -21,15 +26,17 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .galery-section__portfolio-btn:hover,
-  .galery-section__portfolio-btn:focus {
+  
+    &:hover,
+    &:focus {
     background-color: var(--actbtn-bcg);
     color: var(--actbtn-color);
     cursor: pointer;
     box-shadow: 0px 3px 1px var(--shadow-0-1), 0px 1px 2px var(--shadow-0-08),
       0px 2px 2px var(--shadow-0-12);
+    }
   }
+  
   /*galery works*/
   .galery-section__galery-list {
     display: flex;
@@ -46,13 +53,15 @@
   .galery-section__galery-link {
     display: block;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .galery-section__galery-link:hover,
-  .galery-section__galery-link:focus {
+  
+    &:hover,
+    &:focus {
     box-shadow: 0px 1px 1px var(--shadow-0-12), 0px 4px 4px var(--shadow-0-06),
       1px 4px 6px var(--shadow-0-16);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  }
+  
   .galery-section__galery-el-thumb {
     position: relative;
     overflow: hidden;
@@ -71,13 +80,15 @@
     transform: translateY(100%);
     opacity: 0;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .galery-section__galery-link:hover .galery-section__galery-el-overlay,
-  .galery-section__galery-link:focus .galery-section__galery-el-overlay {
+  
+    .galery-section__galery-link:hover &,
+    .galery-section__galery-link:focus & {
     transform: translateY(0);
     opacity: 1;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+  }
+  
   .galery-section__galery-el-text {
     font-weight: 500;
     font-size: 18px;
