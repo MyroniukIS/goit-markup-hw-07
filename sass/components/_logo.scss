@@ -1,0 +1,20 @@
+/*LOGO*/
+.logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  .logo__element--up {
+    margin-right: 93px;
+    color: var(--headers-nav-color);
+    font-family: var(--logo-font);
+  }
+  .logo__part--accent {
+    color: var(--accent-logo-hover-color);
+  }
+  .logo__element--down {
+    display: inline-block;
+    margin-right: 0;
+    margin-bottom: 20px;
+    color: var(--hero-footer-text-color);
+  }

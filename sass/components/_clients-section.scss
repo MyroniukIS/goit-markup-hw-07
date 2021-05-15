@@ -1,0 +1,29 @@
+/*CLIENTS*/
+.clients-section__list {
+    display: inline-flex;
+  }
+  .clients-section__list-element:not(:last-child) {
+    margin-right: var(--margin-card);
+  }
+  .clients-section__list-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--svg-links-color);
+    border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .clients-section__list-link:hover,
+  .clients-section__list-link:focus {
+    border: 1px solid var(--actbtn-bcg);
+  }
+  .clients-section__list-icon {
+    fill: var(--svg-links-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .clients-section__list-link:hover .clients-section__list-icon,
+  .clients-section__list-link:focus .clients-section__list-icon {
+    fill: var(--actbtn-bcg);
+  }
