@@ -1,29 +1,34 @@
 /*FOOTER*/
-.footer-section {
+.footer {
     background-color: var(--hero-footer-bcg-color);
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  .footer-section__container {
+  .footer__box {
     display: flex;
     align-items: baseline;
+    @extend %container;
   }
   /*E footer address area*/
-  .footer-section__address-area {
+  .footer__address-area {
     margin-right: 70px;
   }
-  .footer-section__address-wrap {
+  .footer__address-wrap {
     font-style: inherit;
   }
 
-  .footer-section__down-contacts-list-element {
+  .footer__list {
+    @extend %list;
+  }
+
+  .footer__item {
 
     &:not(:last-child) {
       margin-bottom: 9px;
     }
   }
   
-  .footer-section__down-contacts-list-item {
+  .footer__link {
     font-size: 14px;
     line-height: 1.71;
     color: var(--hero-footer-text-color);
@@ -35,11 +40,11 @@
   }
   }
   
-  .footer-section__down-contacts-list-item--alfa-cl {
+  .footer__link--alfa-cl {
     color: var(--alfa-color);
   }
   /*E footer social area*/
-  .footer-section__social-text {
+  .footer__social-text {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -47,18 +52,19 @@
     margin-bottom: 20px;
     color: var(--hero-footer-text-color);
   }
-  .footer-section__social-list {
+  .footer__social-list {
+    @extend %list;
     display: inline-flex;
   }
 
-  .footer-section__social-element {
+  .footer__social-item {
 
     &:not(:last-child) {
       margin-right: 10px;
     }
   }
   
-  .footer-section__social-link {
+  .footer__social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -75,21 +81,21 @@
   }
   }
   
-  .footer-section__social-icon {
+  .footer__social-icon {
     fill: var(--actbtn-color);
   
-    .footer-section__social-link:hover &,
-    .footer-section__social-link:focus & {
+    .footer__social-link:hover &,
+    .footer__social-link:focus & {
     fill: var(--actbtn-color);
   }
   }
   
   /*E footer form*/
-  .footer-section__subscribe-form {
+  .footer__form {
     min-width: 570px;
     margin-left: auto;
   }
-  .footer-section__subscribe-label {
+  .footer__label {
     display: block;
     margin-bottom: 20px;
     font-weight: 700;
@@ -98,12 +104,12 @@
     text-transform: uppercase;
     color: var(--hero-footer-text-color);
   }
-  .footer-section__subscribe-thumb {
+  .footer__inp-btn-thumb {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .footer-section__subscribe-input {
+  .footer__input {
     margin: 0;
     margin-right: 12px;
     padding: 15px 16px 15px 16px;
@@ -122,7 +128,8 @@
     }
   }
   
-  .footer-section__subscribe-btn {
+  .footer__btn {
+    @extend %section-btn;
     padding: 10px 28px 10px 28px;
     display: flex;
     justify-content: space-between;

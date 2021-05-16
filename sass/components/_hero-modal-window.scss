@@ -66,11 +66,11 @@
   }
   
   /*E hero-modal-form*/
-  .hero-modal__form {
+  .form {
     display: flex;
     flex-direction: column;
   }
-  .hero-modal__title {
+  .form__title {
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
@@ -79,18 +79,18 @@
     color: var(--headers-nav-color);
   }
   /*E hero-modal-inputs*/
-  .hero-modal__label {
+  .form__label {
     margin-bottom: 4px;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
   }
-  .hero-modal__inp-thumb {
+  .form__inp-thumb {
     position: relative;
     margin-bottom: 10px;
   }
-  .hero-modal__input {
+  .form__input {
     width: 100%;
     padding: 11px 12px 11px 42px;
     border: 1px solid var(--modal-input-border);  
@@ -104,7 +104,7 @@
     }
   }
   
-  .hero-modal__icon {
+  .form__inp-icon {
     position: absolute;
     top: 50%;
     left: 12px;
@@ -112,12 +112,12 @@
     fill: var(--headers-nav-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
-    .hero-modal__input:focus + & {
+    .form__input:focus + & {
       fill:var(--accent-logo-hover-color);
     }
   }
   
-  .hero-modal__input--textarea {
+  .form__input--textarea {
     height: 120px;
     padding: 12px 16px 12px 16px;
     margin-bottom: 20px;
@@ -133,26 +133,26 @@
   }
   
   /*E hero-modal-checkbox*/
-  .hero-modal__checkbox-area {
+  .form__checkbox-area {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
   }
-  .hero-modal__label-checkbox {
+  .form__label-checkbox {
     display: flex;
     align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.71;
   }
-  .hero-modal__checkbox-place {
+  .form__checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     position: absolute;
   }
-  .hero-modal__checkbox-icon-wrap{
+  .form__castom-checkbox {
     position: relative;
     display: inline-block;
     width: 16px;
@@ -164,21 +164,21 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
-    .hero-modal__checkbox-place:checked + & {
+    .form__checkbox:checked + & {
       background-color: var(--accent-logo-hover-color);
       border: 2px solid var(--accent-logo-hover-color);
     }
 
-    .hero-modal__checkbox-place:checked:focus + & {
+    .form__checkbox:checked:focus + & {
       background-color: var(--accent-logo-hover-color);
       border: 2px solid var(--accent-logo-hover-color);
     }
 
-    .hero-modal__checkbox-place:focus + & {
+    .form__checkbox:focus + & {
       border: 2px solid var(--accent-logo-hover-color);
     }
   }
-  .hero-modal__checkbox-icon {
+  .form__checkbox-icon {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -187,11 +187,13 @@
     stroke: var(--hero-footer-text-color);
   }
   
-  .hero-modal__link {
+  .form__link {
     margin-left: 5px;
     color: var(--accent-logo-hover-color);
+    text-decoration: underline;
   }
-  .hero-modal__btn {
+  .form__btn {
+    @extend %section-btn;
     margin-right: auto;
     margin-left: auto;
   }

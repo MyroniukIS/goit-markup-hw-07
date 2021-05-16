@@ -1,13 +1,20 @@
 /*FEATURES*/
-.features-section__list {
+.features {
+  @extend %section;
+}
+.features__box {
+  @extend %container;
+}
+.features__list {
     display: flex;
     margin-right: calc(-1 * var(--margin-card));
+    @extend %list;
   }
-  .features-section__list-element {
+  .features__item {
     flex-basis: calc((100% - 4 * var(--margin-card)) / 4);
     margin-right: var(--margin-card);
   }
-  .features-section__icon-wrap {
+  .features__icon-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +23,7 @@
     margin-bottom: 30px;
     background-color: var(--team-section-bcg-color);
   }
-  .features-section__icon-title {
+  .features__title {
     min-width: 270px;
     margin-bottom: 10px;
     font-weight: 700;
@@ -25,7 +32,7 @@
     text-transform: uppercase;
     color: var(--headers-nav-color);
   }
-  .features-section__icon-dscr {
+  .features__dscr {
     min-width: 270px;
     font-size: 14px;
     line-height: 1.71;

@@ -1,19 +1,28 @@
 /*PAGE PORTFOLIO Galery*/
 /*filter*/
-.galery-section__filter-list {
+.galery {
+  @extend %section;
+}
+
+.galery__box {
+  @extend %container;
+}
+
+.galery__filter {
+    @extend %list;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
   }
 
-  .galery-section__filter-element {
+  .galery__filter-item {
 
     &:not(:last-child) {
       margin-right: 8px;
     }
   }
   
-  .galery-section__portfolio-btn {
+  .galery__filter-btn {
     padding: 6px 22px;
     font-weight: 500;
     font-size: 16px;
@@ -38,19 +47,20 @@
   }
   
   /*galery works*/
-  .galery-section__galery-list {
+  .galery__list {
+    @extend %list;
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--margin-card));
     margin-top: calc(-1 * var(--margin-card));
   }
-  .galery-section__galery-element {
+  .galery__item {
     flex-basis: calc((100% - 3 * var(--margin-card)) / 3);
     margin-left: var(--margin-card);
     margin-top: var(--margin-card);
     background: var(--main-bcg-color);
   }
-  .galery-section__galery-link {
+  .galery__link {
     display: block;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
@@ -62,11 +72,11 @@
   }
   }
   
-  .galery-section__galery-el-thumb {
+  .galery__wrap {
     position: relative;
     overflow: hidden;
   }
-  .galery-section__galery-el-overlay {
+  .galery__overlay {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -81,27 +91,27 @@
     opacity: 0;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
-    .galery-section__galery-link:hover &,
-    .galery-section__galery-link:focus & {
+    .galery__link:hover &,
+    .galery__link:focus & {
     transform: translateY(0);
     opacity: 1;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   }
   
-  .galery-section__galery-el-text {
+  .galery__text {
     font-weight: 500;
     font-size: 18px;
     line-height: 1.56;
     color: var(--hero-footer-text-color);
   }
-  .galery-section__galery-el-caption {
+  .galery__card-caption {
     padding: 20px 24px;
     border-right: 1px solid var(--border-color-portfolio);
     border-bottom: 1px solid var(--border-color-portfolio);
     border-left: 1px solid var(--border-color-portfolio);
   }
-  .galery-section__galery-el-caption-title {
+  .galery__card-title {
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
@@ -109,7 +119,7 @@
     letter-spacing: 0.06em;
     color: var(--headers-nav-color);
   }
-  .galery-section__galery-el-caption-dscr {
+  .galery__card-dscr {
     font-size: 16px;
     line-height: 1.87;
     color: var(--main-text-color);

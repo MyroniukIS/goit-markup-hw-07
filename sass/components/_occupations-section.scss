@@ -1,19 +1,24 @@
 /*OCUPATIONS*/
-.occupations-section {
+.occupations {
     padding-top: 0;
+    @extend %section;
   }
-  .occupations-section__list {
+  .occupations__box {
+    @extend %container;
+  }
+  .occupations__list {
     display: flex;
     margin-right: calc(-1 * var(--margin-card));
+    @extend %list;
   }
-  .occupations-section__list-element {
+  .occupations__item {
     flex-basis: calc((100% - 3 * var(--margin-card)) / 3);
     margin-right: var(--margin-card);
   }
-  .occupations-section__list-img-thumb {
+  .occupations__thumb {
     position: relative;
   }
-  .occupations-section__list-overlay {
+  .occupations__overlay {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -25,7 +30,7 @@
     background-color: var(--occupations-overlay-color);
     transform: translate(-50%, 0);
   }
-  .occupations-section__list-text {
+  .occupations__text {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;

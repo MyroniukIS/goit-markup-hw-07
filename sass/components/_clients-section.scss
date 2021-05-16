@@ -1,16 +1,23 @@
 /*CLIENTS*/
-.clients-section__list {
+.clients {
+  @extend %section;
+}
+.clients__box {
+  @extend %container;
+}
+.clients__list {
+    @extend %list;
     display: inline-flex;
   }
 
-  .clients-section__list-element {
+  .clients__item {
 
     &:not(:last-child) {
       margin-right: var(--margin-card);
     }
   }
 
-  .clients-section__list-link {
+  .clients__link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -26,12 +33,12 @@
   }
   }
   
-  .clients-section__list-icon {
+  .clients__icon {
     fill: var(--svg-links-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
-    .clients-section__list-link:hover &,
-    .clients-section__list-link:focus & {
+    .clients__link:hover &,
+    .clients__link:focus & {
     fill: var(--actbtn-bcg);
   }
   }
